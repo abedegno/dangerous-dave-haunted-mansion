@@ -1,0 +1,42 @@
+[project]
+name = "Dangerous Dave in the Haunted Mansion (Softdisk, 1991)"
+root = "."
+src = "src"
+targets = "targets"
+symbols = "symbols.tsv"
+matched = "matched.txt"
+map = "map"
+build = "build"
+
+[binary]
+# HAUNTED.EXE as shipped is packed with LZEXE 0.91, which unpacks from its
+# bytes alone into the image TLINK wrote (original/HAUNTED.UNP.EXE; Exhume's tools/unlzexe.py).  Matching works on
+# the unpacked image; the exact link will add the LZEXE step.
+exe = "original/HAUNTED.UNP.EXE"
+# C0S's first instruction loads DX with DGROUP's paragraph; DS:0004 holds C0's copyright.
+dgroup_para = 0x2711
+
+[toolchain]
+profile = "borland-bc20"
+# the user's own Borland C++ 2.0, installed at toolchain/BC20 (docs/BUILD.md); never committed
+home = "toolchain/BC20"
+stage = ["toolchain/BC20/BIN", "toolchain/BC20/INCLUDE"]
+c_opts = "-ms -O -Z"
+asm_opts = "/ml"
+# For faster compiles, borland-reborn's native Borland C++ 2.0 port can compile the C files
+# in-process: build its shared library and run with EXHUME_NATIVE=bcc20 BCC20_LIB=<path>.
+
+[names]
+# IDASM.ASM: "LABEL inttime WORD" just before "timecount dd 0,0" makes two publics at one address
+extern_aliases = { "_inttime" = "_timecount" }
+
+[gate]
+# tools/rebuild.py links (the load image must equal the unpacked original's) and packs with
+# LZEXE 0.91 and the shipped trailer; the gate then compares with the shipped file itself.
+link = "{python} tools/rebuild.py"
+exact_exe = "PACK/HAUNTED.EXE"
+original = "original/game/HAUNTED.EXE"
+
+[repocheck]
+# the game's own data files (*.DD2) must never be committed
+ban = ["DD2"]

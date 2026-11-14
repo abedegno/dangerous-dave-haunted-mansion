@@ -1,0 +1,24 @@
+# Hosted CI: what needs neither Borland's tools nor the game, which cannot be on GitHub.
+# Exhume's repocheck.py checks script syntax, Markdown links, and that no executable,
+# object, library, disk image or game data file is committed. The real check is
+# `make check`, run locally (and by the pre-push hook: exhume/tools/install-hooks.sh).
+name: repocheck
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  repocheck:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: python3 exhume/tools/repocheck.py --root . --allow '^exhume/'

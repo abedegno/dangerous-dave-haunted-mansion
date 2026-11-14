@@ -1,0 +1,21 @@
+# segment IDASM base 0x8BC6 size 0x50C org 0x8B46
+# _TEXT 8B46-9052: Hovertank 3-D's IDASM.ASM (Gamer's Edge library, ASM section); places from its procedures found byte for byte
+_StartupKbd	_StartupKbd	0x0	0x1B
+_ShutdownKbd	_ShutdownKbd	0x1B	0x1E
+_NoBiosKey	_NoBiosKey	0x39	0x38
+_Int9ISR	_Int9ISR	0x71	0x48
+_StartupSound	_StartupSound	0xB9	0x4D
+_CallTimer	_CallTimer	0x106	0x6
+_ShutdownSound	_ShutdownSound	0x10C	0x3C
+_PlaySound	_PlaySound	0x148	0x36
+_StopSound	_StopSound	0x17E	0x1A
+_PauseSound	_PauseSound	0x198	0x1F
+_ContinueSound	_ContinueSound	0x1B7	0x1C
+_WaitEndSound	_WaitEndSound	0x1D3	0x18
+_UpdateSPKR	_UpdateSPKR	0x1EB	0x9F
+_InitRnd	_InitRnd	0x28A	0x49
+_Rnd	_Rnd	0x2D3	0x50
+_InitRndT	_InitRndT	0x323	0x22
+_RndT	_RndT	0x345	0x14
+_WaitVBL	_WaitVBL	0x359	0x47
+_VideoID	_VideoID	0x3A0	0x16C

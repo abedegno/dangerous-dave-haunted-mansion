@@ -1,0 +1,10 @@
+# segment DD2ASM base 0x55F6 size 0xCBE org 0x5576
+# _TEXT 5576-6233: the game's screen routines in assembly (provisional names)
+_DrawTileAt	_DrawTileAt	0x0	0x24
+_DrawTile	_DrawTile	0x24	0xD3
+_DrawMapRow	_DrawMapRow	0xF7	0x245
+_DrawMapColumn	_DrawMapColumn	0x33C	0x186
+_CopyBand	_CopyBand	0x4C2	0x5C
+_CopyColumn	_CopyColumn	0x51E	0x711
+_XorPic	_XorPic	0xC2F	0x5C
+_CopyScreen	_CopyScreen	0xC8B	0x33

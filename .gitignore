@@ -1,0 +1,15 @@
+# The game is the user's own copy and is never committed: its files, the unpacked
+# executable, and anything built from or extracted out of it.
+original/
+build/
+*.EXE
+*.exe
+*.OBJ
+*.obj
+*.DD2
+__pycache__/
+symbols.tsv.bak
+# the Borland toolchain is the user's own copy (docs/BUILD.md)
+toolchain/
+# the Python virtual environment (docs/BUILD.md)
+.venv

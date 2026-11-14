@@ -1,0 +1,21 @@
+# segment MEMMGR base 0x9CEF size 0xA73 org 0x9C6F
+# _TEXT 9C6F-A6E2 (the 54 zero bytes after it, and Borland's floating-point emulator start-up from A718, are not this file's); names from Hovertank 3-D's MEMMGR.C by order, size and strings (provisional)
+_CheckForEMS	_CheckForEMS	0x0	0x4C
+_FindBlock	_FindBlock	0x4C	0x41
+_RemoveBlock	_RemoveBlock	0x8D	0x71
+_InsertBlock	_InsertBlock	0xFE	0x71
+_MMStartup	_MMStartup	0x16F	0x19B
+_MMShutdown	_MMShutdown	0x30A	0x18
+_MMMapEMS	_MMMapEMS	0x322	0x1
+_MMGetPtr	_MMGetPtr	0x323	0x127
+_MMFreePtr	_MMFreePtr	0x44A	0x13
+_MMSetPurge	_MMSetPurge	0x45D	0x3F
+_MoveParaBase	_MoveParaBase	0x49C	0x22
+_MoveParaBaseUp	_MoveParaBaseUp	0x4BE	0x25
+_MoveParas	_MoveParas	0x4E3	0xA6
+_PushUp	_PushUp	0x589	0xE0
+_PushDown	_PushDown	0x669	0x184
+_MMSortMem	_MMSortMem	0x7ED	0xE5
+_MMBlockDump	_MMBlockDump	0x8D2	0xC6
+_MMUnusedMemory	_MMUnusedMemory	0x998	0x5C
+_MMTotalFree	_MMTotalFree	0x9F4	0x7F

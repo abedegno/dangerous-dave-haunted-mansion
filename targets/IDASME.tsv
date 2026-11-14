@@ -1,0 +1,12 @@
+# segment IDASME base 0x90D2 size 0xC1D org 0x9052
+# _TEXT 9052-9C6F: Hovertank 3-D's IDASME.ASM (EGA graphics); provisional rows
+_EGAplane	_EGAplane	0x0	0x32
+_SetScreen	_SetScreen	0x32	0x42
+_XorBar	_XorBar	0x74	0x70
+_DrawChar	_DrawChar	0xE4	0x9E
+_DrawPic	_DrawPic	0x182	0xC4
+_Bar	_Bar	0x246	0x57
+_CopyEGA	_CopyEGA	0x29D	0x34
+_DrawPchar	_DrawPchar	0x2D1	0x17D
+_ScaleLine	_ScaleLine	0x44E	0x3DD
+_DrawSpriteT	_DrawSpriteT	0x82B	0x3F2

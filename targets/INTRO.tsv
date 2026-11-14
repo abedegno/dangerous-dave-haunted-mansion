@@ -1,0 +1,6 @@
+# segment INTRO base 0x62B4 size 0x96C org 0x6234
+# _TEXT 6234-6B9F: the title sequence (provisional names)
+_CompileShape	_CompileShape	0x0	0x190
+_InitScaler	_InitScaler	0x190	0xC6
+_DrawScaled	_DrawScaled	0x256	0x284
+_Intro	_Intro	0x4DA	0x492
